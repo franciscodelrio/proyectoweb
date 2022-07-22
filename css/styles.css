@@ -167,6 +167,11 @@ body {
     display: inline-block;
     margin-top: 15rem;
     margin-left: 10rem;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 
@@ -180,6 +185,7 @@ main .card .btn {
     text-align: center;
 	color: var(--blanco);
 	border-radius: 0.5rem;
+    transition: .3s ease all;
 }
 
 main .card .btn.primario { 
@@ -301,6 +307,11 @@ main .card .btn.primario:hover {
     display: inline-block;
     margin-top: 15rem;
     margin-left: 10rem;
+    transition: transform .2s;
+}
+
+.cardDiscos:hover {
+    transform: scale(1.1);
 }
 
 
@@ -314,10 +325,15 @@ main .cardDiscos h3 {
     text-align: center;
 	color: var(--blanco);
 	border-radius: 0.5rem;
+    transition: .3s ease all;
 }
 
 main .cardDiscos h3 { 
 	background: var(--destacado);
+}
+
+main .cardDiscos h3:hover {
+	background: var(--secundario);
 }
 
 
@@ -344,9 +360,12 @@ main .cardDiscos h3 {
 
 .imgGaleria {
     width: 25rem;
+    transition: transform .2s;
 }
 
-
+.imgGaleria:hover {
+    transform: scale(1.1);
+}
 
 
 /* * ----- ----- FORMULARIO CONTACTO ----- ----- ----- */
