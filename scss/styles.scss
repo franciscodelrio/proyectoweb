@@ -1,0 +1,38 @@
+@import "./utilities/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Barlow', sans-serif;
+    background-color: $--negro;
+    min-height: 100%;
+}
+
+div.container {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+
+
+
+
+
