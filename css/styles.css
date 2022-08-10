@@ -1,106 +1,302 @@
+@charset "UTF-8";
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+p {
+    text-align: center;
+}
 
 html {
-  font-size: 62.5%;
-  height: 100%; }
+    font-size: 62.5%;
+    height: 100%;
+}
 
 body {
-  font-size: 16px;
-  /* 1rem = 10px */
-  font-family: 'Barlow', sans-serif;
-  background-color: #0F0E0E;
-  min-height: 100%; }
+    font-size: 16px;
+    /* 1rem = 10px */
+    font-family: 'Barlow', sans-serif;
+    background-color: #0F0E0E;
+    min-height: 100%;
+}
 
-div.container {
-  display: grid;
-  width: 100%;
-  grid-template-areas: "header" "main" "footer"; }
+.contG {
+    width: 100%;
+    height: auto;
+}
+
+/** PÁGINA INDEX */
+div.containerInd {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header" "video" "imgVideo" "infoVideo" "main" "footer";
+}
+
+/** PÁGINA CONTACTO */
+div.containerCont {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header" "main" "footer";
+}
 
 header.header {
-  grid-area: header;
-  width: 100%;
-  height: auto;
-  background-color: #2B2B2B;
-  border-bottom: solid 0.2rem #423F3E; }
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    background-color: #2B2B2B;
+    border-bottom: solid 0.2rem #423F3E;
+}
 
 .flex {
-  display: flex;
-  justify-content: end; }
+    display: flex;
+    justify-content: end;
+}
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 .navbar-light .navbar-toggler {
-  border-color: #ffffff; }
+    border-color: #ffffff;
+}
 
 .img-logo {
-  width: 20rem; }
+    width: 20rem;
+}
 
 .navbar-light .navbar-nav .nav-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.7rem;
-  font-weight: 700; }
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* * ----- ----- ----- VIDEO INTRO INDEX ----- ----- ----- */
+.video {
+    grid-area: video;
+}
+
+.videoRes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoRes iframe {
+    width: 400px;
+    height: 200px;
+}
+
+.imgVideo {
+    grid-area: imgVideo;
+}
+
+.imgVideoRes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.imgVideoRes img {
+    width: 35rem;
+}
+
+.infoVideo {
+    grid-area: infoVideo;
+}
+
+.infoVideoRes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+}
+
+.infoVideoRes h1,
+.infoVideoRes p {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.infoVideoRes p {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+/* * ----- ----- ----- MAIN CARDS INDEX ----- ----- ----- */
+.main {
+    grid-area: main;
+}
+
+.contSecciones {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.card {
+    background-color: #010101;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+main .card .btn {
+    display: block;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    transition: 0.3s ease all;
+}
+
+main .card .btn.primario {
+    background: #362222;
+}
+
+main .card .btn.primario:hover {
+    background: #423F3E;
+}
+
+.card img {
+    width: 20rem;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
+}
+
+.card p {
+    width: 20rem;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
 
 main.mainContacto section form.formulario {
-  background-color: #423F3E;
-  width: 80%;
-  margin: 4rem auto 0;
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-bottom: 5rem; }
-  main.mainContacto section form.formulario fieldset {
+    background-color: #423F3E;
+    width: 80%;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+main.mainContacto section form.formulario fieldset {
     border: none;
-    color: #ffffff; }
-    main.mainContacto section form.formulario fieldset legend {
-      text-align: center;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: #ffffff; }
-    main.mainContacto section form.formulario fieldset div.campo {
-      margin-bottom: 1rem; }
-      main.mainContacto section form.formulario fieldset div.campo label {
-        color: #ffffff;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        display: block; }
-      main.mainContacto section form.formulario fieldset div.campo input.input-text {
-        width: 95%;
-        border: none;
-        padding: 1.5rem;
-        border-radius: 0.5rem; }
-      main.mainContacto section form.formulario fieldset div.campo textarea {
-        height: 20rem; }
+    color: #ffffff;
+}
+main.mainContacto section form.formulario fieldset legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+main.mainContacto section form.formulario fieldset div.campo {
+    margin-bottom: 1rem;
+}
+main.mainContacto section form.formulario fieldset div.campo label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+main.mainContacto section form.formulario fieldset div.campo input.input-text {
+    width: 95%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+main.mainContacto section form.formulario fieldset div.campo textarea {
+    height: 20rem;
+}
 
 footer.footer {
-  grid-area: footer;
-  width: 100%;
-  height: auto;
-  background-color: #2B2B2B;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-top: solid 0.2rem #423F3E;
-  padding-top: 1.5rem;
-  bottom: 0; }
-  footer.footer div.contSN {
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    background-color: #2B2B2B;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: solid 0.2rem #423F3E;
+    padding-top: 1.5rem;
+    bottom: 0;
+}
+footer.footer div.contSN {
     display: inline-block;
     color: #ffffff;
-    margin-left: 2rem; }
-    footer.footer div.contSN div.redesSociales {
-      display: inline-block; }
-      footer.footer div.contSN div.redesSociales a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: 700;
-        margin-right: 1.5rem; }
-  footer.footer div.contP {
+    margin-left: 2rem;
+}
+footer.footer div.contSN div.redesSociales {
+    display: inline-block;
+}
+footer.footer div.contSN div.redesSociales a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 1.5rem;
+}
+footer.footer div.contP {
     display: inline-block;
     color: #ffffff;
     margin-left: auto;
-    margin-right: 2rem; }
+    margin-right: 2rem;
+}
+
+/** PÁGINA INDEX */
+@media (min-width: 768px) {
+    .div.containerInd {
+        grid-template-areas: "header header" "video video" "imgVideo infoVideo" "main main" "footer footer";
+    }
+    .video {
+        padding-top: 5rem;
+    }
+    .videoRes iframe {
+        width: 560px;
+        height: 315px;
+    }
+    .imgVideoRes {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+    .infoVideoRes {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    div.containerInd {
+        grid-template-areas: "header header header" "video video imgVideo" "video video infoVideo" "main main main" "footer footer footer";
+    }
+    .videoRes iframe {
+        width: 640px;
+        height: 360px;
+    }
+}
